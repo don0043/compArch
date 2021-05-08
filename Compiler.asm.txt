@@ -1,0 +1,20 @@
+q00003,     AND fnc026            ;Address of q00003
+fnc026      CLE			  ;Function q00003
+            BSA pop		  ;Getting return address
+	    STA temp1
+	    STA q00028
+	    LDA temp1
+	    BSA push		  ;Putting return address back
+	    CLE			  ;{WORD} q00027 = q00032
+	    LDA q00032
+	    BSA push
+	    BSA pop
+	    STA q00027
+
+
+
+            CLE			  ;{WORD} q00035 = q00030
+	    LDA q00030
+	    BSA push
+	    BSA pop
+	    STA q00035
